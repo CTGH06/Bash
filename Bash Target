@@ -1,0 +1,7 @@
+#!/bin/sh
+
+/etc/os-response
+lsb_release -a
+
+if ("os" = "Ubuntu") then
+echo "Ubuntu detected"
