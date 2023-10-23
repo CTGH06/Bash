@@ -1,7 +1,11 @@
 #!/bin/sh
 
-/etc/os-response
-lsb_release -a
+# Get the OS information
+os_info=$(lsb_release -a 2>/dev/null)
 
-if ("os" = "Ubuntu") then
-echo "Ubuntu detected"
+# Check if the OS is Ubuntu
+if [[ $os_info == *Ubuntu* ]]; then
+    echo "Ubuntu detected"
+else
+    echo "Ubuntu not detected"
+fi
